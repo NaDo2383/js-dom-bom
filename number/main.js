@@ -1,9 +1,9 @@
 let a = Math.floor(Math.random() * 20 + 1), b;
-let c = document.getElementsByClassName("score")[0].innerHTML;
+
 
 function store_value() {
     b = document.getElementsByClassName("guess")[0].value;
-
+    let c = document.getElementsByClassName("score")[0].innerHTML;
     if (b > 0 && b <= 20) {
         if (c > 0) {
             if (b > a) {
