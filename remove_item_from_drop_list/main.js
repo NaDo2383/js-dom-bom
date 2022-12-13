@@ -4,6 +4,7 @@ function removeElement() {
     for (let i = 0; i < list.length; i++) {
         if (list[i].selected) {
             list.removeChild(list.children[i]);
+            // list.splice(i, 1);
         }
     }
 }
