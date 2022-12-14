@@ -11,9 +11,11 @@ function timer1() {
             }
         }
     }
+    // console.log(ms);
     if (ms == 1000) {
         ms = 0;
         s++;
+        // console.log(s);
         if (s < 10) {
             s = "0" + s;
         }
@@ -25,7 +27,9 @@ function timer1() {
             }
         }
     }
+    stopWatch.innerHTML = `${m}:${s}:${ms}`;
 }
 setInterval(timer1, 1);
 
-stopWatch.innerHTML = `${m}:${s}:${ms}`;
+
+
