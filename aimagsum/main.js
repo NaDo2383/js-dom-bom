@@ -18,7 +18,11 @@ let jagsaalt_sum = [
 let jagsaalt_aimag = ["Архангай", "Баянхонгор", "Булган", "Говь-Алтай", "Говьсүмбэр"];
 let aimag = document.getElementById("aimag");
 let sum = document.getElementById("sum");
+
 function makingAimagList() {
+    let aimagOption;
+    for (let i = 0; i < jagsaalt_aimag.length; i++) {
+        aimagOption = jagsaalt_aimag[i];
 
-
+    }
 }
