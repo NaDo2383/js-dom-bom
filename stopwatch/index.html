@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="timer">
-
+    <div id="container">
+        <div id="timer">
+            0:0:000
+        </div>
+        <div id="buttons">
+            <span class="btn" onclick="startTimer()">Start</span>
+            <span class="btn" onclick="stopTimer()">Stop</span>
+            <span class="btn" onclick="pauseTimer()">Pause</span>
+        </div>
     </div>
     <script src="./main.js"></script>
 </body>

@@ -1,35 +1,42 @@
 let m = 0, s = 0, ms = 0, stopWatch = document.getElementById("timer");
-// let int = setInterval(timer1, 1);
+let time_starter = null;
+
 function timer1() {
-    ms++;
-    if (ms < 1000) {
-        ms = "0" + ms;
-        if (ms < 100) {
-            ms = "00" + ms;
-            if (ms < 10) {
-                ms = "000" + ms;
-            }
-        }
-    }
-    // console.log(ms);
+    ms += 10;
     if (ms == 1000) {
         ms = 0;
         s++;
-        // console.log(s);
         if (s < 10) {
             s = "0" + s;
         }
         if (s == 60) {
             s = 0;
             m++;
-            if (m < 10) {
-                m = "0" + m;
-            }
+            // if (m < 10) {
+            //     m = "0" + m;
+            // }
         }
     }
     stopWatch.innerHTML = `${m}:${s}:${ms}`;
 }
-setInterval(timer1, 1);
+function startTimer() {
+    if (time_starter !== null) {
+
+    } else {
+        time_starter = setInterval(timer1, 10);
+    }
+}
+function pauseTimer() {
+    clearInterval(time_starter);
+    time_starter = null;
+}
+function stopTimer() {
+    clearInterval(time_starter);
+    stopWatch.innerHTML = `0:0:000`;
+    time_starter = null;
+}
+
+
 
 
 
