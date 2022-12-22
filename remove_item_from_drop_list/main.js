@@ -1,10 +1,11 @@
 //task1
-let list = document.querySelectorAll("option"), btn = document.querySelector("input");
+let btn = document.querySelector("input");
+let list = document.querySelectorAll("option");
+let arr = ["bhgjk", "gvbhjn", "vghbjnmk", "vvghbjn"]
 function removeElement() {
     for (let i = 0; i < list.length; i++) {
         if (list[i].selected) {
-            list.removeChild(list.children[i]);
-            // list.splice(i, 1);
+            list[i].remove()
         }
     }
 }
